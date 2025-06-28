@@ -22,7 +22,7 @@ The compressing logic is simple (but not as efficient as jpeg) it takes the (at 
 
 ### Encoding
 
-Although the logic may sound simple, encoding is a bit more complicated. The first step is to reduce the quality (if needed) using special tools already provided by `skimage.transform`. Then, the most complicated step, is to find the $2^x$ (with $x \in \natnums, 1 \le x \le 6$) most common different colors found in the image. For this I used the Median Cut Algorithm inspired by [muthu.co](https://muthu.co/reducing-the-number-of-colors-of-an-image-using-median-cut-algorithm/). Then finally, the last step is to store the pixels in a seperate image_data.py file according to the logic. The image data is stored as a list (each element is a string) and the colors are stored in a dictionnary
+Although the logic may sound simple, encoding is a bit more complicated. The first step is to reduce the quality (if needed) using special tools already provided by `skimage.transform`. Then, the most complicated step, is to find the $2^x$ (with $x \in \N, 1 \le x \le 6$) most common different colors found in the image. For this I used the Median Cut Algorithm inspired by [muthu.co](https://muthu.co/reducing-the-number-of-colors-of-an-image-using-median-cut-algorithm/). Then finally, the last step is to store the pixels in a seperate image_data.py file according to the logic. The image data is stored as a list (each element is a string) and the colors are stored in a dictionnary
 The 64 different characters that can be used as colors are:
 ```Python
 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&|@#?!$%/*=+"
