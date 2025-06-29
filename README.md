@@ -1,6 +1,6 @@
 # Python Image Viewer for Numworks calculators
 
-This small projects aims to inefficiently (but simply) compress images which can be then opened with an image viewer on the Numworks calculator, all running on the Python app.
+This small project aims to inefficiently (but simply) compress images which can be then opened with an image viewer on the Numworks calculator, all running on the Python app.
 
 This project is using the packages `scikit-image` to deal with images, `numpy` to deal with arrays, `kandinsky` to render on Numworks calculators, and a little bit of `math`.
 
